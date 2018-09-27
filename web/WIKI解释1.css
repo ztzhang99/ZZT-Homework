@@ -1,0 +1,40 @@
+body{
+	margin: 0px;
+	background-color: #f2f2f2;
+}
+
+#content{ /*主要内容都需要居中*/
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+#banner{ /*顶部的深色渐变*/
+	margin: 0px;
+	box-sizing: border-box; /*避免内部元素撑开盒模型*/
+	height: 200px;
+	background: linear-gradient(#212121, #373737);
+	text-align: center;
+	padding: 40px;
+}
+
+#banner h1{ /*顶上的大标题*/
+	margin: 0px;
+	color: white;
+	font-size: 42px;
+	font-weight: 700;
+	text-shadow: #111111 0px 0px 10px; /*说实话我看不出来这个阴影*/
+	font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+	letter-spacing: -1px;
+}
+
+#banner h2{ /*顶上的英文小标题*/
+	margin: 10px;
+	color: #ffffff;
+    font-size: 24px;
+    font-weight: 300;
+    text-shadow: #111111 0px 0px 10px; /*这个阴影也看不出来*/
+    font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+}
