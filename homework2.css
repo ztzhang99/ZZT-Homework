@@ -4,7 +4,7 @@ body{
 }
 
 #content{ /*主要内容都需要居中*/
-	width: 550px;
+	width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 100px;
@@ -30,7 +30,7 @@ body{
 	letter-spacing: -1px;
 }
 
-#banner h2, #contact p{ /*顶上的英文小标题和下面GitHub图标旁的文字*/
+#banner h2{ /*顶上的英文小标题*/
 	margin: 10px;
 	color: #ffffff;
     font-size: 24px;
@@ -39,36 +39,12 @@ body{
     font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
 }
 
-#contact{ /*Github图标所在的区域*/
-	background-color: #373737;
-	height: 70px;
-	width: 550px;
+#part2{ /*让第二部分和第一部分隔开一点*/
+    margin-top: 100px;
 }
 
-#contact img, #contact p{ /*Github图标和文字*/
-	display: inline;
-	color: #ffffff;
-	vertical-align: middle;
-	margin: 0px; /*实际上只对文字有效果，让文字紧贴图片	*/
-}
-
-.bold{
-	font-weight: bold;
-}
-
-a{
-	text-decoration: none;
-}
-
-table{
-	text-align: center;
-	border-collapse: collapse;
-	width: 550px;
-}
-
-th, td{
-	border: 2px solid #373737;
-	height: 50px;
+#part2 li{ /*列表每行分开一点*/
+    padding: 10px;
 }
 
 footer{
