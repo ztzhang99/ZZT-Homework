@@ -107,3 +107,18 @@ a{ /*去掉所有链接的下划线，包括后面的作业的*/
 	border-left : none;
 	border-right : 3px #373737 solid;
 }
+
+footer{
+    height: 89px;
+    background: #212121;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    text-shadow: #111111 0px 0px 10px; /*这个阴影也看不出来*/
+    font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+}
+
+.bold{
+	font-weight: bold;
+}
