@@ -70,3 +70,14 @@ th, td{
 	border: 2px solid #373737;
 	height: 50px;
 }
+
+footer{
+    height: 89px;
+    background: #212121;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    text-shadow: #111111 0px 0px 10px; /*这个阴影也看不出来*/
+    font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+}
