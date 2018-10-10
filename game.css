@@ -44,6 +44,11 @@ body{
 		font-weight: bold;
 	}
 
+	.inline-block{
+		display: inline-block;
+		margin: 0 50px 0 50px; /*仅用于排版，随便写的*/
+	}
+
 	h1{
 		text-align: center;
 	}
@@ -54,8 +59,21 @@ body{
 		margin-right: auto;
 	}
 
+	#content h2{
+		font-size: 150%;
+		border-bottom: 1px solid gray;
+	}
+
+	#content > div{
+		margin-bottom: 50px;
+	}
+
 	blockquote{
 		font-style: italic;
+	}
+
+	li{
+		margin: 20px 0 20px 0;
 	}
 /*正文*/
 
