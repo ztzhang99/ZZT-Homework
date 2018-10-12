@@ -1,0 +1,241 @@
+body{
+	margin: 0px;
+	background-color: #f2f2f2;
+}
+
+#content{ /*主要内容都需要居中*/
+	width: 550px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+#banner{ /*顶部的深色渐变*/
+	margin: 0px;
+	box-sizing: border-box; /*避免内部元素撑开盒模型*/
+	height: 200px;
+	background: linear-gradient(#212121, #373737);
+	text-align: center;
+	padding: 40px;
+}
+
+#banner h1{ /*顶上的大标题*/
+	margin: 0px;
+	color: white;
+	font-size: 42px;
+	font-weight: 700;
+	text-shadow: #111111 0px 0px 10px; /*说实话我看不出来这个阴影*/
+	font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+	letter-spacing: -1px;
+}
+
+#banner h2{ /*顶上的英文小标题*/
+	margin: 10px;
+	color: #ffffff;
+    font-size: 24px;
+    font-weight: 300;
+    text-shadow: #111111 0px 0px 10px; /*这个阴影也看不出来*/
+    font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+}
+
+/*正文*/
+#content{
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	height: 3000px;
+}
+
+/* 辅助线 */
+#intro{
+	float: left;
+	display: inline-block;
+	height: 410px; /*避免塌陷*/
+	width: 790px;
+	border: 1px solid gray;
+}
+
+#intro-left{
+	float: left;
+	margin-left: 30px;
+	display: inline-block;
+	width: 480px;
+}
+
+#intro-left span.title{
+	margin-top: 23px;
+	margin-bottom: 13px;
+	display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height:14px;
+    border-left: 3px solid #519cea;/* 装饰 */
+    padding-left: 10px;/* 装饰 */
+}
+
+#intro-left img{
+	display: block;
+}
+
+#intro-left p{
+	margin-top: 13px;
+    color: #666;
+    font-family: SimSun;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+#intro-right{
+	float: left;
+	margin-left: 40px;
+	display: inline-block;
+	width: 210px;
+}
+
+#intro-right span.title{
+	display: block; /* 内联元素是没有margin的 */
+	margin-top: 23px;
+    font-family: SimSun;
+    font-size: 12px;
+    line-height: 24px;
+    color: #545454;
+    font-weight: 700;
+}
+
+#intro-right p{
+	margin-top: 0px;
+	margin-bottom: 20px;
+    color: #666;
+    font-family: SimSun;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+#info{
+	margin-left: 100px;
+	margin-bottom: 8px;
+	display: inline-block;
+}
+
+#info span.title{
+	display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height:14px;
+}
+
+#info dt{
+	margin-bottom: 5px;
+	border-bottom: 1px dotted gray;
+	float: left;
+	width: 108px;
+	color: #999;
+	font-weight: 700;
+	font: 12px/1.5 arial,'\5b8b\4f53',sans-serif;
+}
+
+/*防止塌陷*/
+#info dt.blank{
+	height: 17.6px;
+	margin-bottom: 5px;
+}
+
+#info dd{
+	margin-left: 0px;
+	margin-bottom: 5px;
+	border-bottom: 1px dotted gray;
+	float: left;
+	width: 285px;
+    color: #333;
+    font: 12px/1.5 arial,'\5b8b\4f53',sans-serif;
+}
+
+#rel{
+	margin-left: 100px;
+	display: inline-block;
+}
+
+#rel span.title{
+	display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height:14px;
+    margin-bottom: 5px;
+}
+
+#rel .someone{
+	display: inline-block;
+	width: 200px;
+}
+
+#rel .someone img{
+	float: left;
+	margin-right: 5px;
+}
+
+#rel .name{
+	font-family: SimSun;
+    font-size: 12px;
+    line-height: 24px;
+    color: #545454;
+    font-weight: 700;
+}
+
+#rel .intro{
+	color: #666;
+    font-family: SimSun;
+    font-size: 12px;
+}
+
+#summary{
+	float: left;
+	display: inline-block;
+	margin-top: 100px;
+	width: 790px;
+	font-size: 14px;
+	color: #333;
+	line-height: 24px
+}
+
+.imgs{
+	float: left;
+	margin-left: 100px;
+	margin-top: 120px; /*纯粹为了美观，但在数学上看起来很丑*/
+	display: inline-block;
+}
+
+.imgs img{
+	display: block;
+}
+
+#first{
+	float: left;
+	display: inline-block;
+	margin-top: 100px;
+	width: 790px;
+	font-size: 14px;
+	color: #333;
+	line-height: 24px
+}
+
+/*正文*/
+
+a{
+	text-decoration: none;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+footer{
+    height: 89px;
+    background: #212121;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    text-shadow: #111111 0px 0px 10px; /*这个阴影也看不出来*/
+    font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+}
