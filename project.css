@@ -39,37 +39,12 @@ body{
     font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
 }
 
-#content{
-	margin-left: auto;
-	margin-right: auto;
-	width: 80%;
-}
-
-#content h1{
-	border-bottom: 1px solid gray;
-}
-
-#content li{
-	margin-bottom: 5px;
-}
-
-#content .bold{
-	font-weight: bold;
-}
-
 /*正文*/
-#content table{
-	border-collapse: collapse;
-}
-
-#content td, #content th{
-	border: 1px solid gray;
-	text-align: center;
-}
-
-#content h2{
-	margin-top: 40px;
-}
+	#content{
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+	}
 /*正文*/
 
 a{

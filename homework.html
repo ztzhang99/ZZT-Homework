@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>作业4</title>
+	<link type="text/css" href="homework.css" rel="stylesheet" media="screen" />
+</head>
+
+<body>
+	<div id="banner"> <!--顶上的深色标语-->
+		<h1>软件工程导论作业4</h1>
+		<h2>Homework of Introduction to Software Engineering -- hw3</h2>
+	</div>
+
+	<div id="content">
+		<h1>Explaination</h1><!--正文-->
+
+		<h2>ASCII</h2>
+		<p>ASCII (/ˈæskiː/), abbreviated from American Standard Code for Information Interchange, is a character encoding standard for electronic communication. </p>
+
+		<h2>Color</h2>
+		<p>
+			Color (American English) or colour (Commonwealth English) is the characteristic of human visual perception described through color categories, with names such as red, orange, yellow, green, blue, or purple.
+		</p>
+		<p>
+			Most light sources are mixtures of various wavelengths of light.
+			<ul>
+				<li>Additive color(RGB) is light created by mixing together light of two or more different colors. Red, green, and blue are the additive primary colors normally used in additive color systems such as projectors and computer terminals.</li>
+				<li>Subtractive color(CMY) uses dyes, inks, pigments, or filters to absorb some wavelengths of light and not others.</li>
+			</ul>
+		</p>
+
+		<h1>Answer questions</h1>
+		<h2>写出字符“A”,“中”的 ASCII 码、 Unicode 码、 utf-8 编码。</h2>
+		<p>Answer:</p>
+		<table>
+			<tr><th></th><th>ASCII</th><th>Unicode</th><th>utf-8</th></tr>
+			<tr><td>A</td><td>65</td><td>\u0041</td><td>41;</td></tr>
+			<tr><td>中</td><td>NaN</td><td>\u4E2D</td><td>4E2D;</td></tr>
+		</table>
+		<p>unicode的所有字符都为16位，而utf-8的英文字符仍是8位的。两种编码方式的英文字符其实都兼容ASCII。</p>
+
+		<h2>黄色(yellow)的RGB编码是</h2>
+		<p>Answer:</p>
+		<p>(255,255,0)</p>
+
+		<h2>从网上下载一个BMP格式图像,用图片编辑工具另存在jpg、png、tiff格式。问三种格式中,哪种格式显示质量好?相对于BMP格式,压缩率各是多少?</h2>
+		<p>
+			BMP
+			<ul>
+				<li>位深度：可选lbit、4bit、8bit及24bit</li>
+				<li>压缩率：不压缩</li>
+			</ul>
+		</p>
+		<p>
+			PNG
+			<ul>
+				<li>位深度：真彩色24位，外加8位表示透明</li>
+				<li>压缩率：（无损）30%-50%</li>
+			</ul>
+		</p>
+		<p>
+			JPG
+			<ul>
+				<li>位深度：24bit</li>
+				<li>压缩率：（有损）1%-10%</li>
+			</ul>
+		</p>
+		<p>
+			tiff
+			<ul>
+				<li>可变</li>
+				<li>可变</li>
+			</ul>
+		</p>
+		<p>综上，在JPG和PNG中比较，PNG画质更好，但压缩率较高（减少得少）。tiff由于参数可变，没法比较。</p>
+
+		<h2>Winrar压缩文件是lossless, or lossy 方法？</h2>
+		<p>Answer:</p>
+		<p>肯定无损啊，有损的压缩软件还敢拿出来卖？？</p>
+	</div><!--正文-->
+
+	<footer><br/>Completed on 10.12</footer>
+</body>
+</html>
