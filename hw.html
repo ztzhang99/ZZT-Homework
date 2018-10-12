@@ -14,11 +14,126 @@
 	</div>
 
 	<!--正文-->
-	<h1>Part 1</h1>
+	<div id="content">
+		<div>
+			<h1>Part 1</h1>
+			<h2>Write out variables x, y and z in binary code</h2>
+			<ol>
+				<li>
+					int8_t x = 67;<span>Answer: 0100 0011</span><br />
+					int8_t y = -7;<span>Answer: 1111 1001</span><br />
+					int8_t z = y - x;<span>Answer: 1011 0110</span>
+				</li>
+				<li>int8_t x = 0xd3;<span class="error">Answer: Overflow</span></li>
+				<li>uint8_t = 0xd3;<span>Answer: 1101 0011</span></li>
+				<li>
+					int8_t x = 127;<span>Answer: 0111 1111</span><br />
+					int8_t y = -7;<span>Answer: 1111 1001</span><br />
+					int8_t z = y – x;<span class="error">Answer: Underflow</span>
+				</li>
+				<li>float x = 1.125;<span>Answer: 0 01111111 00100000000000000000000</span></li>
+				<li>float x = 23.0;<span>Answer: 0 10000011 01110000000000000000000</span></li>
+				<li>float x = 0.45;<span>Answer: 0 01111101 11001100110011001100110 </span><span class="error">Accuracy error</span></li>
+			</ol>
+		</div>
+		<div>
+			<h1>Part 2</h1>
+			<h2>Explaination</h2>
+			<ol>
+				<li>
+					<h3>Method of complements:</h3>
+					In mathematics and computing, the method of complements is a technique used to subtract one number from another using only addition of positive numbers.<br />
+					The method of complements is especially useful in binary (radix 2) since the ones' complement is very easily obtained by inverting each bit (changing '0' to '1' and vice versa). Adding 1 to get the two's complement can be done by simulating a carry into the least significant bit.<br />
+					<br />
+					The radix complement of an <span class="formula">n</span> digit number <span class="formula">y</span> in radix <span class="formula">b</span> is, by definition, <span class="formula">b<sup>n</sup>-y</span>. The radix complement is most easily obtained by adding <span class="formula">1</span> to the diminished radix complement, <span class="formula">(b<sup>n</sup>-1)-y</span>. Since <span class="formula">b<sup>n</sup>-1</span> is the digit <span class="formula">b-1</span> repeated <span class="formula">n</span> times (because <span class="formula">b<sup>n</sup>-1=(b-1)(b<sup>n-1</sup>+b<sup>n-2</sup>+...+b+1)=(b-1)b<sup>n-1</sup>+...+(b-1)</span>), the diminished radix complement of a number is found by complementing each digit with respect to <span class="formula">b-1</span> (that is, subtracting each digit in <span class="formula">y</span> from <span class="formula">b-1</span>.<br />
+					<br />
+					在计算机科学里，我们无法直接定义radix complement为<span class="formula">b<sup>n</sup>-y</span>，而要通过diminished radix complement +1 来间接定义。为什么？假如我们要用<span class="formula">b</span>进制的<span class="formula">n</span>位表示一个整数，<span class="formula">n</span>位实际上是无法表示<span class="formula">b<sup>n</sup></span>的。因此就要借助diminished radix complement。
+				</li>
+				<li>
+					<h3>Byte:</h3>
+					The byte is a unit of digital information that most commonly consists of eight bits, representing a binary number.
+				</li>
+				<li>
+					<h3>Integer (computer science):</h3>
+					In computer science, an integer is a datum of integral data type, a data type that represents some range of mathematical integers.
+				</li>
+				<li>
+					<h3>Floating point:</h3>
+					In computing, floating-point arithmetic (FP) is arithmetic using formulaic representation of real numbers as an approximation so as to support a trade-off between range and precision.
+				</li>
+			</ol>
 
-	<h1>Part 2</h1>
+			<h2>Other</h2>
+			<ol>
+				<li>
+					请证明：二进制的负数（two's complement of X）等于 X 的 ones's complement ＋ 1（即，X每位求反加1）<br /><br />
+					Answer: 
+					<ol>
+						<li>For n digits, -X = 2<sup>n</sup> - X</li>
+						<li>
+							One's complement of X equals to subtracting each digit in X from 1.<br />
+							Meanwhile, 11111...111(n digits) = 1*(2<sup>n-1</sup>+2<sup>n-2</sup>+...+2+1) = 2<sup>n</sup> -1.<br />
+							That means, one's complement of X equals to (2<sup>n</sup> -1) - X.
+						</li>
+						<li>So, two's complement of X equals to one's complement of X.</li>
+					</ol>
+				</li>
+				<br />
+				<li>
+					Int8_t x = - 017; 请用8进制描述变量 x。<br /><br />
+					Answer: <br />
+					<ol>
+						<li>Seven's complement of 017 equals to 060.</li>
+						<li>Eight's complement of 017 equals to 060 + 1, which equals to 061.</li>
+						<li>So, x can be represented by 061.</li>
+					</ol>
+				</li>
+
+				<br />
+				<li>
+					C程序：int8_t x = -0x1f; int y = x; 请用16进制描述变量 x 和 y，并说明 int y = x 的计算过程。<br /><br />
+					Answer: <br />
+					<ol>
+						<li>x : 11100001<sub>2</sub> = 0xE1</li>
+						<li>y : 11111111111111111111111111100001<sub>2</sub> = 0xFFFFFFE1</li>
+						<li>
+							Proof:<br />
+							<ul>
+								<li>
+									First let's see what will happen if we add a digit-1 to the left of a subtractive number.
+								</li>
+								<li>
+									There is a subtractive number <span class="formula">x</span>. We add a digit-1 to the left of it, and we name the new number as <span class="formula">y</span>.
+								</li>
+								<li>
+									Suppose that the new digit-1 is the <span class="formula">n</span>th digit of <span class="formula">y</span>.
+								</li>
+								<li>
+									As we know, two's complement of <span class="formula">x</span> equals to <span class="formula">2<sup>n-1</sup> - x</span>, and two's complement of <span class="formula">y</span> equals to <span class="formula">2<sup>n</sup> - y</span>.
+								</li>
+								<li>
+									For <span class="formula">y = x + 2<sup>n-1</sup></span>, two's complement of <span class="formula">y</span> equals to <span class="formula">2<sup>n</sup> - x - 2<sup>n-1</sup></span>, which is also equals to <span class="formula">2<sup>n-1</sup> - x</span></span>.
+								</li>
+								<li>
+									So, two's complement of <span class="formula">x</span> equals to two's complement of <span class="formula">y</span>, which means, <span class="formula">- x = - y</span>.
+								</li>
+								<li>
+									Umm... Now we can conclude that <span class="formula">x = y</span>.
+								</li>
+							</ul>
+						</li>
+					</ol>
+				</li>
+				<li>
+					Explaination: What is NaN?<br /><br />
+					IEEE 754 specifies a special value called "Not a Number" (NaN) to be returned as the result of certain "invalid" operations, such as 0/0, ∞×0, or sqrt(−1).<br /><br />
+					The representation of NaNs specified by the standard has some unspecified bits that could be used to encode the type or source of error; but there is no standard for that encoding.
+				</li>
+			</ol>
+		</div>
+	</div>
 	<!--正文-->
 
-	<footer><br/>Completed on 10.11</footer>
+	<footer><br/>Completed on 10.12</footer>
 </body>
 </html>

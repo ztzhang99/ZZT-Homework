@@ -40,8 +40,35 @@ body{
 }
 
 /*正文*/
-	h1{
-		text-align: center;
+	#content{
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+	}
+
+	#content > div{
+		margin-bottom: 50px;
+	}
+
+	#content h1{
+		border-bottom: 1px solid gray;
+	}
+
+	#content li{
+		margin-bottom: 10px;
+	}
+
+	#content li > span{
+		margin-left: 50px;
+	}
+
+	#content li >span.error{
+		font-weight: bold;
+	}
+
+	#content li > span.formula{
+		margin-left: 0px; /* 抵消前面的 */
+		font-weight: bold;
 	}
 /*正文*/
 
