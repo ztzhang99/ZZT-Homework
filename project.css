@@ -39,12 +39,15 @@ body{
     font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
 }
 
-/*正文*/
-	#content{
+#content{
 		margin-left: auto;
 		margin-right: auto;
 		width: 80%;
 	}
+/*正文*/
+
+
+
 /*正文*/
 
 a{
