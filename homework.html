@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>作业5</title>
+	<link type="text/css" href="homework.css" rel="stylesheet" media="screen" />
+</head>
+
+<body>
+	<div id="banner"> <!--顶上的深色标语-->
+		<h1>软件工程导论作业5</h1>
+		<h2>Homework of Introduction to Software Engineering -- hw5</h2>
+	</div>
+
+	<div id="content"><!--正文-->
+		<h2>1)What does AND mean?</h2>
+		<p>If A<sub>i</sub> == 1, meanwhile B<sub>i</sub> == 1, then A<sub>i</sub> & B<sub>i</sub> = 1.</p>
+		<ol>
+			<li>111 & 000 = 000</li>
+			<li>101 & 111 = 101</li>
+			<li>011 & 011 = 011</li>
+		</ol>
+
+		<h2>2)What does XOR mean?</h2>
+		<p>If A<sub>i</sub> != B<sub>i</sub>, then A<sub>i</sub> XOR B<sub>i</sub> = 1.</p>
+		<ol>
+			<li>111 XOR 000 = 111</li>
+			<li>101 XOR 111 = 010</li>
+			<li>011 XOR 011 = 000</li>
+		</ol>
+
+		<h2>3)Draw a circuit diagram corresponding to the following Boolean expression: (A + B)(B + C)</h2>
+		<img src="img/gate.PNG" />
+
+		<h2>4)Show the behavior of the following circuit with a truth table:</h2>
+		<table>
+			<tr><th>A</th><th>B</th><th>Result</th></tr>
+			<tr><td>0</td><td>0</td><td>1</td></tr>
+			<tr><td>0</td><td>1</td><td>1</td></tr>
+			<tr><td>1</td><td>0</td><td>0</td></tr>
+			<tr><td>1</td><td>1</td><td>1</td></tr>
+		</table>
+
+		<h2>5)What is circuit equivalence? Use truth table to prove the following formula.</h2>
+		<table>
+			<tr><th>A</th><th>B</th><th>Left</th><th>Right</th></tr>
+			<tr><td>0</td><td>0</td><td>1</td><td>1</td></tr>
+			<tr><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+			<tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+			<tr><td>1</td><td>1</td><td>0</td><td>0</td></tr>
+		</table>
+
+		<h2>6)There are eight 1bit full adder integrated circuits. Combine them to 8bit adder circuit using the following box diagram.</h2>
+		<img src="img/carry.PNG" />
+
+		<h2>7)</h2>
+		<ol>
+			<li>(X<sub>8</sub>X<sub>7</sub>X<sub>6</sub>X<sub>5</sub>1111)2</sub></li>
+			<li>(X<sub>8</sub>X<sub>7</sub>X<sub>6</sub>X<sub>5</sub>X'<sub>4</sub>X'<sub>3</sub>X'<sub>2</sub>X'<sub>1)2</sub></li>
+			<li>(X<sub>8</sub>X<sub>7</sub>X<sub>6</sub>X<sub>5</sub>X'<sub>4</sub>X'<sub>3</sub>X'<sub>2</sub>X'<sub>1)2</sub></li>
+		</ol>
+
+		<h2>Explaination</h2>
+		<h3>Logic gate</h3>
+		<p>In electronics, a logic gate is an idealized or physical device implementing a Boolean function; that is, it performs a logical operation on one or more binary inputs and produces a single binary output.</p>
+		<h3>Boolean algebra</h3>
+		<p>In mathematics and mathematical logic, Boolean algebra is the branch of algebra in which the values of the variables are the truth values true and false, usually denoted 1 and 0 respectively.</p>
+
+		<h2>Flip-flop</h2>
+		<p>1)Flip-flop 中文翻译是?</p>
+		<img src="img/ff&latch.PNG" />
+
+		<p>2)How many bits information does a SR latch store?</p>
+		<img src="img/sr.PNG" />
+		
+	</div><!--正文-->
+
+	<footer><br/>Completed on 10.19</footer>
+</body>
+</html>
