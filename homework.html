@@ -3,142 +3,18 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>作业7</title>
+	<title>作业9</title>
 	<link type="text/css" href="homework.css" rel="stylesheet" media="screen" />
 </head>
 
 <body>
 	<div id="banner"> <!--顶上的深色标语-->
-		<h1>软件工程导论作业7</h1>
-		<h2>Homework of Introduction to Software Engineering -- hw7</h2>
+		<h1>软件工程导论作业9</h1>
+		<h2>Homework of Introduction to Software Engineering -- hw9</h2>
 	</div>
 
 	<div id="content"><!--正文-->
-		<ol>
-			<li>
-				Program with machine language according to the following c.<br />
-				int_8 a = 1;<br />
-				int_8 c = a + 3;
-				<ol>
-					<li>
-						Write your assembly code & machine code<br />
-						Answer: (MIPS)
-						<ul>
-							<li>
-								Assembly code:<br />
-<pre>
-  .data
-  a:  .byte
-  c:  .byte
 
-  .text
-  main:
-    la  $s0, a
-    addi  $t0, $0, 1
-    sw  $t0, 0($s0)
-    la  $s1, c
-    addi  $t0, $t0, 3
-    sw  $t0, 0($s1)
-
-    li  $v0, 10
-    syscall
-</pre>
-							</li>
-							<li>
-								Machine code:<br />
-<pre>
-  001000 01000 00000 0000000000000001 #addi
-  101011 01000 10000 0000000000000000 #sw
-  001000 01000 01000 0000000000000011 #addi
-  101011 01000 01001 0000000000000000 #sw
-</pre>
-							</li>
-						</ul>
-					</li>
-					<li>
-						Explain machine code execution with the fetch-decode-execute cycle<br />
-						Answer:<br />
-						<dl>
-							<dt>Fetch:</dt>
-							<dd>Fetch a line of code from the memory, and store it in IR. Then, add 4(or sth else) to PC.</dd>
-							<dt>Decode:</dt>
-							<dd>Set different control signal depending on the opcode, and load value from registers(if needed).</dd>
-							<dt>Execute:</dt>
-							<dd>Do different operations depending on the control signal.</dd>
-					</li>
-					<li>
-						Explain functions about IR, PC, ACC registers in a CPU<br />
-						Answer:<br />
-						<dl>
-							<dt>IR:</dt>
-							<dd>Store a line of code, which is loaded from memory.</dd>
-							<dt>PC:</dt>
-							<dd>Record the address of a line of code, which is going to be loaded a clock time later.</dd>
-							<dt>ACC:</dt>
-							<dd>Temporarily store the result of an add operation. Without ACC, we must store the result to memory and load it back immediately, which is really a waste of time.</dd>
-					</li>
-					<li>
-						Explain physical meaning about vars a & c in a machine<br />
-						Answer:<br />
-						Both a and c are addresses. Through these addresses, we are able to store and retrieve data to and from memory.
-					</li>
-				</ol>
-			</li>
-			<li>
-				简答题
-				<ol>
-					<li>
-						What are stored in memory?<br />
-						Answer:<br />
-						Generally speaking, data. Instructions are also seen as data.
-					</li>
-					<li>
-						Can a data or a instruction stored in the same place?<br />
-						Answer:<br />
-						No. According to principle of locality, it is not efficient to do so.
-					</li>
-					<li>
-						Explain Instruction Format with example instructions.<br />
-						Answer:<br />
-						001000 01000 00000 0000000000000001 #addi<br />
-						31-26: The opcode of "addi".
-						25-21: 8, the sign of register $t0.
-						20-16: 0, the sign of register $zero.
-						15-0: 1, an immediate number, which will be added to $t0.
-					</li>
-				</ol>
-			</li>
-			<li>
-				解释以下词汇
-				<ol>
-					<li>
-						汇编语言(Assembly Language)<br />
-						Explaination:<br />
-						A low level language. After transformed into machine language by assembler, the code can be directly understood by CPU.
-					</li>
-					<li>
-						编译(Compiler)<br />
-						Explaination:<br />
-						A process to transform high level language into machine language, which is done by compiler.
-					</li>
-					<li>
-						命令式语言(Imperative programming)<br />
-						Explaination:<br />
-						A kind of languages like C & C++. These languages are based on the Von Neumann organization.
-					</li>
-					<li>
-						函数编程语言(Functional programming)<br />
-						Explaination:<br />
-						A kind of languages like Haskell. There is no variable or side effect in these languages. Compiler can do more optimization in these languages than in imperative languages.
-					</li>
-					<li>
-						过程式编程(Procedural programming)<br />
-						Explaination:<br />
-						The only way of programming which I have programmed.
-					</li>
-				</ol>
-			</li>
-		</ol>
 	</div><!--正文-->
 
 	<footer><br/>Completed on 11.6</footer>
