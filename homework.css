@@ -57,12 +57,12 @@ body{
 	font-weight: bold;
 }
 
-/*正文*/
-._1st > li{
-	margin-top: 50px;
+li ol{
+	list-style-type: lower-alpha;
 }
 
-._2st > li, dt{
+/*正文*/
+li{
 	margin-top: 20px;
 }
 /*正文*/
