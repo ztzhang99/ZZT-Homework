@@ -3,144 +3,178 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>作业7</title>
+	<title>作业8</title>
 	<link type="text/css" href="homework.css" rel="stylesheet" media="screen" />
 </head>
 
 <body>
 	<div id="banner"> <!--顶上的深色标语-->
-		<h1>软件工程导论作业7</h1>
-		<h2>Homework of Introduction to Software Engineering -- hw7</h2>
+		<h1>软件工程导论作业8</h1>
+		<h2>Homework of Introduction to Software Engineering -- hw8</h2>
 	</div>
 
 	<div id="content"><!--正文-->
 		<ol>
 			<li>
-				Program with machine language according to the following c.<br />
-				int_8 a = 1;<br />
-				int_8 c = a + 3;
+				阅读 Pseudocode Standard。（答案可以打印）
 				<ol>
 					<li>
-						Write your assembly code & machine code<br />
-						Answer: (MIPS)
-						<ul>
-							<li>
-								Assembly code:<br />
-<pre>
-  .data
-  a:  .byte
-  c:  .byte
-
-  .text
-  main:
-    la  $s0, a
-    addi  $t0, $0, 1
-    sw  $t0, 0($s0)
-    la  $s1, c
-    addi  $t0, $t0, 3
-    sw  $t0, 0($s1)
-
-    li  $v0, 10
-    syscall
-</pre>
-							</li>
-							<li>
-								Machine code:<br />
-<pre>
-  001000 01000 00000 0000000000000001 #addi
-  101011 01000 10000 0000000000000000 #sw
-  001000 01000 01000 0000000000000011 #addi
-  101011 01000 01001 0000000000000000 #sw
-</pre>
-							</li>
-						</ul>
+						用伪代码描述将十进制转换成16进制的方法
+						<pre>
+char DecToHex(number){
+	case number
+		0: return '0'
+		1: return '1'
+		2: return '2'
+		3: return '3'
+		4: return '4'
+		5: return '5'
+		6: return '6'
+		7: return '7'
+		8: return '8'
+		9: return '9'
+		10: return 'A'
+		11: return 'B'
+		12: return 'C'
+		13: return 'D'
+		14: return 'E'
+		15: return 'F'
+		others: return Error
+	end case
+}
+						</pre>
 					</li>
 					<li>
-						Explain machine code execution with the fetch-decode-execute cycle<br />
-						Answer:<br />
-						<dl>
-							<dt>Fetch:</dt>
-							<dd>Fetch a line of code from the memory, and store it in IR. Then, add 4(or sth else) to PC.</dd>
-							<dt>Decode:</dt>
-							<dd>Set different control signal depending on the opcode, and load value from registers(if needed).</dd>
-							<dt>Execute:</dt>
-							<dd>Do different operations depending on the control signal.</dd>
+						C语言实现（先用注释写好算法，然后翻译）
+						<pre>
+char DecToHex(int number){
+	if(number < 0 || number > 15)
+		return EOF;
+	char arr[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+	return arr[number];
+}
+						</pre>
 					</li>
 					<li>
-						Explain functions about IR, PC, ACC registers in a CPU<br />
+						使用 -1, 0, 1, 15, 26，3265 最为输入测试你的程序<br />
 						Answer:<br />
-						<dl>
-							<dt>IR:</dt>
-							<dd>Store a line of code, which is loaded from memory.</dd>
-							<dt>PC:</dt>
-							<dd>Record the address of a line of code, which is going to be loaded a clock time later.</dd>
-							<dt>ACC:</dt>
-							<dd>Temporarily store the result of an add operation. Without ACC, we must store the result to memory and load it back immediately, which is really a waste of time.</dd>
-					</li>
-					<li>
-						Explain physical meaning about vars a & c in a machine<br />
-						Answer:<br />
-						Both a and c are addresses. Through these addresses, we are able to store and retrieve data to and from memory.
+						?, 0, 1, F, ?, ?
 					</li>
 				</ol>
 			</li>
 			<li>
-				简答题
+				名词解释与对比
 				<ol>
 					<li>
-						What are stored in memory?<br />
-						Answer:<br />
-						Generally speaking, data. Instructions are also seen as data.
+						Top-down design<br />
+						A top-down approach (also known as stepwise design and in some cases used as a synonym of decomposition) is essentially the breaking down of a system to gain insight into its compositional sub-systems in a reverse engineering fashion. In a top-down approach an overview of the system is formulated, specifying, but not detailing, any first-level subsystems. Each subsystem is then refined in yet greater detail, sometimes in many additional subsystem levels, until the entire specification is reduced to base elements.
 					</li>
 					<li>
-						Can a data or a instruction stored in the same place?<br />
-						Answer:<br />
-						No. According to principle of locality, it is not efficient to do so.
+						Work breakdown structure (WBS)<br />
+						A work-breakdown structure (WBS) in project management and systems engineering, is a deliverable-oriented breakdown of a project into smaller components. A work breakdown structure is a key project deliverable that organizes the team's work into manageable sections.
 					</li>
 					<li>
-						Explain Instruction Format with example instructions.<br />
-						Answer:<br />
-						001000 01000 00000 0000000000000001 #addi<br />
-						31-26: The opcode of "addi".
-						25-21: 8, the sign of register $t0.
-						20-16: 0, the sign of register $zero.
-						15-0: 1, an immediate number, which will be added to $t0.
+						简述管理学 WBS 与 信息学Top-down设计的异同<br />
+						同：Breaking down a system to smaller components.
+						异：Top-down产生一个层叠的结构，而WBS对此并无要求。
 					</li>
 				</ol>
 			</li>
 			<li>
-				解释以下词汇
+				仔细观察您洗衣机的运作过程，运用Top-down设计方法和Pseudocode 描述洗衣机控制程序。假设洗衣机可执行的基本操作如下：<br />
+				water_in_switch(open_close) // open打开上水开关，close关闭<br />
+				water_out_switch(open_close) // open打开排水开关，close关闭<br />
+				get_water_volume() //返回洗衣机内部水的高度<br />
+				motor_run(direction) // 电机转动。left左转，right右转，stop停<br />
+				time_counter() // 返回当前时间计数，以秒为单位<br />
+				halt(returncode) //停机，success 成功 failure 失败<br />
+
 				<ol>
 					<li>
-						汇编语言(Assembly Language)<br />
-						Explaination:<br />
-						A low level language. After transformed into machine language by assembler, the code can be directly understood by CPU.
+						请使用伪代码分解“正常洗衣”程序的大步骤。包括注水、浸泡等
+						<pre>
+注水()
+
+浸泡()
+
+电机转动()
+
+排水()
+
+甩干()
+
+停机()
+						<pre>
 					</li>
 					<li>
-						编译(Compiler)<br />
-						Explaination:<br />
-						A process to transform high level language into machine language, which is done by compiler.
+						进一步用基本操作、控制语句（IF、FOR、WHILE等）、变量与表达式，写出每个步骤的伪代码
+						<pre>
+注水(){
+	water_in_switch(open)
+	repeat{
+		wait()
+	}until(get_water_volume() >= 预定水面高度)
+	water_in_switch(close)
+}
+
+浸泡(){
+	time_counter = 0
+	while(time_counter < 预定浸泡时间){
+		wait()
+		increment time_counter
+	}
+}
+
+电机转动(){
+	电机次数 = 0
+	while(电机次数 < 预定电机次数){
+		motor_run(left)
+		wait()
+		motor_run(right)
+		wait()
+		increment 电机次数
+	}
+}
+
+排水(){
+	water_out_switch(open)
+	repeat{
+		wait()
+	}until(get_water_volume == 0)
+}
+
+甩干(){
+	time_counter = 0
+	while(time_counter < 预定甩干时间){
+		motor_run(right)
+		increment time_counter
+	}
+	water_out_switch(close) //On purpose
+}
+
+停机(){
+	halt(SUCCESS)
+}
+						</pre>
 					</li>
 					<li>
-						命令式语言(Imperative programming)<br />
-						Explaination:<br />
-						A kind of languages like C & C++. These languages are based on the Von Neumann organization.
+						根据你的实践，请分析“正常洗衣”与“快速洗衣”在用户目标和程序上的异同。你认为是否存在改进（创新）空间，简单说明你的改进意见？<br />
+						Answer: 快速洗衣的目标用户为赶时间的、急于快速洗好衣服的人，快速洗衣的程序没有浸泡阶段，同时预定电机次数也更少。
 					</li>
 					<li>
-						函数编程语言(Functional programming)<br />
-						Explaination:<br />
-						A kind of languages like Haskell. There is no variable or side effect in these languages. Compiler can do more optimization in these languages than in imperative languages.
-					</li>
-					<li>
-						过程式编程(Procedural programming)<br />
-						Explaination:<br />
-						The only way of programming which I have programmed.
+						通过步骤c，提取一些共性功能模块（函数），简化“正常洗衣”程序，使程序变得更利于人类理解和修改维护。例如：<br />
+						wait(time) //等待指定的时间；<br />
+						注水(volume,timeout) //在指定时间内完成注水，否则停机；<br />
+						排水(timeout)<br />
+						Answer: 已经这样做了。
 					</li>
 				</ol>
 			</li>
 		</ol>
-	</div><!--正文-->
+	</li>
+</ol>
+</div><!--正文-->
 
-	<footer><br/>Completed on 11.6</footer>
+<footer><br/>Completed on 11.8</footer>
 </body>
 </html>
