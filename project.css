@@ -46,7 +46,17 @@ body{
 	}
 /*正文*/
 
+#main{
+	text-align: center;
+}
 
+#sub{
+	margin-left: 200px;
+}
+
+h2{
+	margin-top: 50px;
+}
 
 /*正文*/
 
