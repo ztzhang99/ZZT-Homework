@@ -14,9 +14,69 @@
 	</div>
 
 	<div id="content"><!--正文-->
-
+		<ul>
+			<li>
+				涉及的类：
+				<ol>
+					<li>岸边</li>
+					<li>船</li>
+					<li>牧师</li>
+					<li>恶魔</li>
+					<li>Go按钮</li>
+					<li>计时器</li>
+					装饰性的：
+					<li>河</li>
+					<li>广告按钮</li>
+				</ol>
+			</li>
+			<li>
+				涉及的对象：
+				<ol>
+					<li>岸边：2个</li>
+					<li>船：1个</li>
+					<li>牧师：3个</li>
+					<li>恶魔：3个</li>
+					<li>Go按钮：1个</li>
+					<li>计时器：1个</li>
+					装饰性的：
+					<li>河：1个</li>
+					<li>广告按钮：1个</li>
+				</ol>
+			</li>
+			<li>
+				对象是类的实例。例如，牧师类只有1个，而牧师对象有3个。
+			</li>
+			<li><br />
+				属性：
+				<ol>
+					<li>所在的岸边</li>
+				</ol>
+				方法：
+				<ol>
+					<li>进入船</li>
+					<li>离开船</li>
+					<li>杀死牧师</li>
+				</ol>
+			</li>
+			<li><br />
+				<pre>
+//在游戏中，一旦船靠岸就检查是否会发生恶魔杀死牧师的事件，因此这里不检查。
+devilx.onclick = function(){
+	if(devilx.onBoat = 0)
+		devilx.onBoat = 1;
+	else
+		devilx.onBoat = 0;
+	if(devil1.whichBank == 1 && devil2.whichBank == 1 && devil2.whichBank == 1)
+		succeed();
+}
+				</pre>
+			</li>
+			<li>
+				我认为不会。假如一个类名为“坐”，虽然它可以有子类“盘腿坐”等，但它的对象会是什么？我认为类和对象只会是名词。
+			</li>
+		</ul>
 	</div><!--正文-->
 
-	<footer><br/>Completed on 11.6</footer>
+	<footer><br/>Completed on 11.19</footer>
 </body>
 </html>
