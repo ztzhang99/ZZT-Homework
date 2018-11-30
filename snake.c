@@ -59,7 +59,10 @@ int main(){
 	put_money();
 	output();
 	while(play){ //play用于判定是否Game Over，可能被left、right、up、down四个函数所改变
-		ch = getchar();
+		ch = getchar(); //不使用回车就读取字符依赖于操作系统，既然不给用微软提供的头文件，那就每次都回车呗。搞不懂为什么限制这种鬼东西。
+		//The C library itself deals with files, and doesn't concern itself with how data gets into the input file.
+		//Therefore, there's no way in the language itself to get keys as they are pressed; instead, this is platform-specific.
+		//Since you haven't specified OS or compiler, we can't look it up for you.
 		switch(ch){
 			case 'A':
 			case 'a':{
